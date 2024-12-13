@@ -1,0 +1,11 @@
+models:
+  dbt_mobile_usage:
+    bronze:
+      +materialized: table
+      +schema: bronze
+    silver:
+      +materialized: table
+      +schema: silver
+    gold:
+      +schema: gold
+      +materialized: view

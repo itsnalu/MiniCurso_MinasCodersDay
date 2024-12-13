@@ -1,0 +1,11 @@
+dbt_pagamentos:
+  outputs:
+    dev:
+      host: localhost
+      password: ''
+      port: 9030
+      schema: dbt
+      type: starrocks
+      username: root
+      version: 3.3.3
+  target: dev

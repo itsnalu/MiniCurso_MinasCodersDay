@@ -1,0 +1,51 @@
+- Gestão de dados
+- Versionamento de dados
+- Ferramentas de computação
+- Pipeline
+- Governança de dados
+
+Lake = metadados, dados e amostras
+
+Ingestão: ferramenta de entrada de dados, é preciso escalabilidade e segurança
+Data lake: armazena o máximo de informações possíveis da melhor forma possível (custo, monitoramento de acessos)
+DVD + Metadata: escalabilidades, redução de custo, duplicação de informação 
+CE: processamento de informações, isolamento e governança (paralelismo, tempo de escrita e leitura)
+Pipelines: qualidade dos dados
+Governança: lida com a permissão de acesso aos dados
+
+Digitar no terminal:
+/Downloads/minicurso/dbt$ python3 -m venv venv
+/Downloads/minicurso/pip freeze
+/Downloads/minicurso/minio$ docker compose up -d
+/Downloads/minicurso/starrocks$ docker compose up -d
+http://localhost:9001
+senha e lgoin: minioadmin
+
+bucket: "balde" de dados
+
+acess key
+bQdKTzRmSipjRwsStM6l
+secret key
+OpBXpmKcmpscsqBEJa4CtewaiVsA077pIgwCpael
+
+dbt = vai automatizar o processo de consulta de dados
+
+Digitar no terminal:
+aluno@aluno-C4400:~/Downloads/minicurso/dbt$ source venv/bin/activate
+(venv) aluno@aluno-C4400:~/Downloads/minicurso/dbt$ pip install dbt-starrocks
+
+ifconfig (para pegar o ip publico)
+
+dbt init
+
+Enter a number: 1
+host (hostname for the instance) [localhost]: 192.168.103.23
+port [9030]: 
+schema (default schema that dbt will build objects in) [dbt]: 
+username (username) [root]: 
+password (password) []: 
+version []: 3.3.3
+
+/Downloads/minicurso/dbt$ cd dbt_mobile_usage/
+/Downloads/minicurso/dbt$ dbt usage
+
